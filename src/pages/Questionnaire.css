@@ -1,0 +1,61 @@
+.questionnaire-page {
+  max-width: 480px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+  padding: 32px 24px;
+  font-family: inherit;
+}
+.questionnaire-page h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #cb6d51;
+}
+.questionnaire-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.questionnaire-form label {
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.questionnaire-form input {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  font-size: 1rem;
+}
+.questionnaire-form button {
+  background: linear-gradient(90deg, #cb6d51, #b85d47);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 0;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s;
+}
+.questionnaire-form button:disabled {
+  background: #e0e0e0;
+  color: #888;
+  cursor: not-allowed;
+}
+.error {
+  color: #d32f2f;
+  background: #fff3f3;
+  border-radius: 8px;
+  padding: 8px;
+  margin-top: 8px;
+  text-align: center;
+}
+.success {
+  color: #424242;
+  background: #f3fff3;
+  border-radius: 8px;
+  padding: 8px;
+  margin-top: 8px;
+  text-align: center;
+}

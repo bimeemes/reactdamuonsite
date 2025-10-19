@@ -1,0 +1,1420 @@
+/* Corner Decorations - Elegant and Modern */
+
+/* Container for all corner decorations */
+.corner-decorations {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Top Left Corner - Curved Wave */
+.corner-decoration-top-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, rgba(203, 109, 81, 0.1) 0%, rgba(212, 132, 90, 0.05) 50%, transparent 100%);
+  border-radius: 0 0 100% 0;
+  animation: float-tl 6s ease-in-out infinite;
+}
+
+.corner-decoration-top-left::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(135deg, rgba(203, 109, 81, 0.08) 0%, transparent 70%);
+  border-radius: 0 0 100% 0;
+  animation: float-tl 8s ease-in-out infinite reverse;
+}
+
+/* Top Right Corner - Arrow Lines */
+.corner-decoration-top-right {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 200px;
+  height: 200px;
+}
+
+.arrow-line {
+  position: absolute;
+  background: linear-gradient(45deg, rgba(203, 109, 81, 0.4), rgba(212, 132, 90, 0.2));
+  animation: arrow-flow 4s ease-in-out infinite;
+}
+
+.arrow-line-1 {
+  width: 80px;
+  height: 2px;
+  top: 20px;
+  right: 0;
+  animation-delay: 0s;
+}
+
+.arrow-line-2 {
+  width: 60px;
+  height: 2px;
+  top: 40px;
+  right: 20px;
+  animation-delay: 0.5s;
+}
+
+.arrow-line-3 {
+  width: 100px;
+  height: 2px;
+  top: 60px;
+  right: 0;
+  animation-delay: 1s;
+}
+
+/* Arrow heads */
+.arrow-line::after {
+  content: '';
+  position: absolute;
+  right: -8px;
+  top: -3px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid rgba(203, 109, 81, 0.4);
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+}
+
+/* Bottom Left Corner - Geometric Shapes */
+.corner-decoration-bottom-left {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  width: 180px;
+  height: 180px;
+}
+
+.geometric-shape {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(203, 109, 81, 0.1), rgba(212, 132, 90, 0.05));
+  animation: pulse-rotate 5s ease-in-out infinite;
+}
+
+.shape-1 {
+  width: 60px;
+  height: 60px;
+  top: 0;
+  left: 0;
+  animation-delay: 0s;
+}
+
+.shape-2 {
+  width: 40px;
+  height: 40px;
+  top: 80px;
+  left: 30px;
+  animation-delay: 1s;
+}
+
+.shape-3 {
+  width: 50px;
+  height: 50px;
+  top: 40px;
+  left: 100px;
+  animation-delay: 2s;
+}
+
+/* Bottom Right Corner - Wavy Lines */
+.corner-decoration-bottom-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 280px;
+  height: 280px;
+  background: linear-gradient(315deg, rgba(203, 109, 81, 0.08) 0%, rgba(212, 132, 90, 0.04) 50%, transparent 100%);
+  border-radius: 100% 0 0 0;
+  animation: float-br 7s ease-in-out infinite;
+}
+
+.wavy-line {
+  position: absolute;
+  bottom: 60px;
+  right: 60px;
+  width: 150px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, rgba(203, 109, 81, 0.3), transparent);
+  border-radius: 50px;
+  animation: wave-motion 3s ease-in-out infinite;
+}
+
+.wavy-line-2 {
+  bottom: 80px;
+  right: 80px;
+  width: 120px;
+  animation-delay: 0.5s;
+}
+
+.wavy-line-3 {
+  bottom: 100px;
+  right: 100px;
+  width: 90px;
+  animation-delay: 1s;
+}
+
+/* Floating Elements */
+.floating-element {
+  position: absolute;
+  background: rgba(203, 109, 81, 0.1);
+  border-radius: 50%;
+  animation: float-around 8s ease-in-out infinite;
+}
+
+.float-1 {
+  width: 20px;
+  height: 20px;
+  top: 25%;
+  left: 5%;
+  animation-delay: 0s;
+}
+
+.float-2 {
+  width: 15px;
+  height: 15px;
+  top: 70%;
+  right: 8%;
+  animation-delay: 2s;
+}
+
+.float-3 {
+  width: 25px;
+  height: 25px;
+  top: 15%;
+  right: 15%;
+  animation-delay: 4s;
+}
+
+/* Animations */
+@keyframes float-tl {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  33% { transform: translate(-10px, 5px) rotate(1deg); }
+  66% { transform: translate(5px, -8px) rotate(-1deg); }
+}
+
+@keyframes float-br {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(-8px, -5px) rotate(0.5deg); }
+}
+
+@keyframes arrow-flow {
+  0% { opacity: 0.2; transform: translateX(-20px); }
+  50% { opacity: 0.8; transform: translateX(0); }
+  100% { opacity: 0.2; transform: translateX(20px); }
+}
+
+@keyframes pulse-rotate {
+  0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.6; }
+  50% { transform: scale(1.1) rotate(180deg); opacity: 0.8; }
+}
+
+@keyframes wave-motion {
+  0%, 100% { transform: translateY(0) scaleX(1); }
+  25% { transform: translateY(-5px) scaleX(1.1); }
+  75% { transform: translateY(5px) scaleX(0.9); }
+}
+
+@keyframes float-around {
+  0%, 100% { transform: translate(0, 0); opacity: 0.3; }
+  25% { transform: translate(10px, -15px); opacity: 0.7; }
+  50% { transform: translate(-5px, -20px); opacity: 0.5; }
+  75% { transform: translate(-10px, 10px); opacity: 0.6; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .corner-decoration-top-left,
+  .corner-decoration-bottom-right {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .corner-decoration-top-right,
+  .corner-decoration-bottom-left {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .arrow-line {
+    width: 50px !important;
+  }
+  
+  .floating-element {
+    display: none; /* Hide on mobile for cleaner look */
+  }
+}
+
+@media (max-width: 480px) {
+  .corner-decoration-top-left,
+  .corner-decoration-bottom-right {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .corner-decoration-top-right,
+  .corner-decoration-bottom-left {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* Dark mode compatibility */
+@media (prefers-color-scheme: dark) {
+  .corner-decoration-top-left,
+  .corner-decoration-bottom-right {
+    background: linear-gradient(135deg, rgba(203, 109, 81, 0.15) 0%, rgba(212, 132, 90, 0.08) 50%, transparent 100%);
+  }
+  
+  .arrow-line,
+  .geometric-shape {
+    background: linear-gradient(45deg, rgba(203, 109, 81, 0.5), rgba(212, 132, 90, 0.3));
+  }
+}
+
+/* Advanced Corner Decorations */
+.advanced-corner-decorations {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+  overflow: hidden;
+}
+
+/* Interactive Particles */
+.interactive-particle {
+  position: absolute;
+  background: radial-gradient(circle, rgba(203, 109, 81, 0.4) 0%, rgba(212, 132, 90, 0.2) 50%, transparent 100%);
+  border-radius: 50%;
+  transition: transform 0.3s ease-out;
+}
+
+.particle-1 {
+  width: 8px;
+  height: 8px;
+  top: 20%;
+  left: 10%;
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+.particle-2 {
+  width: 6px;
+  height: 6px;
+  top: 60%;
+  right: 15%;
+  animation: twinkle 4s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.particle-3 {
+  width: 10px;
+  height: 10px;
+  bottom: 30%;
+  left: 8%;
+  animation: twinkle 5s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+/* Persian Pattern Corner */
+.persian-pattern-corner {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  opacity: 0.6;
+}
+
+.persian-svg {
+  filter: drop-shadow(0 2px 4px rgba(203, 109, 81, 0.2));
+}
+
+.rotating-pattern {
+  transform-origin: 100px 80px;
+  animation: slow-rotate 20s linear infinite;
+}
+
+/* Flowing Lines */
+.flowing-lines-container {
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+  width: 100%;
+  height: 200px;
+}
+
+.flowing-lines-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.flowing-line {
+  animation: flow-animation 8s ease-in-out infinite;
+}
+
+.line-1 {
+  animation-delay: 0s;
+}
+
+.line-2 {
+  animation-delay: 2s;
+}
+
+/* Additional Animations */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.2); }
+}
+
+@keyframes slow-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes flow-animation {
+  0% { stroke-dasharray: 0, 200; }
+  50% { stroke-dasharray: 100, 200; }
+  100% { stroke-dasharray: 0, 200; }
+}
+
+/* Mobile Responsiveness for Advanced Decorations */
+@media (max-width: 768px) {
+  .persian-pattern-corner {
+    transform: scale(0.7);
+    top: 10px;
+    right: 10px;
+  }
+  
+  .flowing-lines-container {
+    display: none;
+  }
+  
+  .interactive-particle {
+    display: none;
+  }
+}
+
+/* Subtle Background Patterns */
+.corner-decorations::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(203, 109, 81, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(212, 132, 90, 0.02) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(184, 93, 71, 0.02) 0%, transparent 50%);
+  animation: subtle-glow 15s ease-in-out infinite;
+}
+
+@keyframes subtle-glow {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 0.8; }
+}
+
+/* ========== LUXURY DECORATIONS ========== */
+.luxury-decorations {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 3;
+  overflow: hidden;
+}
+
+/* Persian Mandala */
+.persian-mandala-corner {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  opacity: 0.7;
+  animation: gentle-float 12s ease-in-out infinite;
+}
+
+.mandala-svg {
+  filter: drop-shadow(0 0 10px rgba(203, 109, 81, 0.3));
+}
+
+/* Luxury Particles */
+.luxury-particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: radial-gradient(circle, rgba(203, 109, 81, 0.8) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: twinkle-luxury 2s ease-in-out infinite;
+}
+
+/* Corner Spirals */
+.corner-spiral {
+  position: absolute;
+  opacity: 0.6;
+}
+
+.corner-spiral-tl {
+  top: 20px;
+  left: 20px;
+  animation: gentle-rotate 15s linear infinite;
+}
+
+.corner-spiral-br {
+  bottom: 20px;
+  right: 20px;
+  animation: gentle-rotate 20s linear infinite reverse;
+}
+
+.spiral-path {
+  animation: stroke-flow 4s ease-in-out infinite;
+}
+
+.spiral-path-2 {
+  animation: stroke-flow 6s ease-in-out infinite reverse;
+}
+
+/* Floating Ornaments */
+.floating-ornaments {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.ornament {
+  position: absolute;
+  animation: float-ornament 8s ease-in-out infinite;
+}
+
+/* Dynamic Borders */
+.dynamic-borders {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.border-line {
+  position: absolute;
+  background: linear-gradient(90deg, rgba(203, 109, 81, 0.4), rgba(212, 132, 90, 0.2), transparent);
+  transition: all 0.3s ease;
+}
+
+.border-top {
+  top: 0;
+  left: 0;
+  height: 2px;
+  animation: border-glow 3s ease-in-out infinite;
+}
+
+.border-right {
+  top: 0;
+  right: 0;
+  width: 2px;
+  background: linear-gradient(180deg, rgba(203, 109, 81, 0.4), rgba(212, 132, 90, 0.2), transparent);
+  animation: border-glow 3.5s ease-in-out infinite;
+}
+
+.border-bottom {
+  bottom: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(270deg, rgba(203, 109, 81, 0.4), rgba(212, 132, 90, 0.2), transparent);
+  animation: border-glow 4s ease-in-out infinite;
+}
+
+.border-left {
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  background: linear-gradient(0deg, rgba(203, 109, 81, 0.4), rgba(212, 132, 90, 0.2), transparent);
+  animation: border-glow 4.5s ease-in-out infinite;
+}
+
+/* Corner Burst Effects */
+.corner-burst {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+
+.corner-burst-tl {
+  top: 50px;
+  left: 50px;
+}
+
+.corner-burst-br {
+  bottom: 50px;
+  right: 50px;
+}
+
+.burst-ray {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 30px;
+  background: linear-gradient(180deg, rgba(203, 109, 81, 0.6), transparent);
+  transform-origin: bottom center;
+  animation: ray-pulse 2s ease-in-out infinite;
+}
+
+.burst-ray-alt {
+  background: linear-gradient(180deg, rgba(212, 132, 90, 0.5), transparent);
+  height: 25px;
+  animation: ray-pulse 2.5s ease-in-out infinite;
+}
+
+/* ========== PREMIUM DECORATIONS ========== */
+.premium-decorations {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 4;
+  overflow: hidden;
+}
+
+/* Morphing Blobs */
+.morphing-blobs {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(1px);
+  animation: blob-morph 8s ease-in-out infinite;
+}
+
+.blob-1 {
+  width: 150px;
+  height: 150px;
+  top: 10%;
+  left: 5%;
+  background: radial-gradient(circle, rgba(203, 109, 81, 0.15) 0%, rgba(212, 132, 90, 0.08) 60%, transparent 100%);
+  animation-delay: 0s;
+}
+
+.blob-2 {
+  width: 120px;
+  height: 120px;
+  top: 60%;
+  right: 8%;
+  background: radial-gradient(circle, rgba(212, 132, 90, 0.12) 0%, rgba(184, 93, 71, 0.06) 60%, transparent 100%);
+  animation-delay: 2s;
+}
+
+.blob-3 {
+  width: 100px;
+  height: 100px;
+  bottom: 20%;
+  left: 15%;
+  background: radial-gradient(circle, rgba(184, 93, 71, 0.1) 0%, rgba(203, 109, 81, 0.05) 60%, transparent 100%);
+  animation-delay: 4s;
+}
+
+/* Scroll Elements */
+.scroll-elements {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+}
+
+.scroll-indicator {
+  transition: all 0.3s ease;
+}
+
+/* Network Connections */
+.network-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.network-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.network-line {
+  animation: network-pulse 3s ease-in-out infinite;
+}
+
+.network-node {
+  animation: node-pulse 2s ease-in-out infinite;
+}
+
+/* Cascade Effects */
+.cascade-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.cascade-element {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: rgba(203, 109, 81, 0.4);
+  border-radius: 50%;
+  animation: cascade-fall 4s ease-in-out infinite;
+}
+
+/* Ripple Effects */
+.ripple-container {
+  position: absolute;
+  bottom: 100px;
+  left: 100px;
+}
+
+.ripple {
+  position: absolute;
+  border: 2px solid rgba(203, 109, 81, 0.3);
+  border-radius: 50%;
+  animation: ripple-expand 4s ease-out infinite;
+}
+
+.ripple-1 {
+  width: 50px;
+  height: 50px;
+  animation-delay: 0s;
+}
+
+.ripple-2 {
+  width: 50px;
+  height: 50px;
+  animation-delay: 1s;
+}
+
+.ripple-3 {
+  width: 50px;
+  height: 50px;
+  animation-delay: 2s;
+}
+
+/* Kaleidoscope */
+.kaleidoscope-corner {
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  opacity: 0.4;
+}
+
+.kaleidoscope-group {
+  transform-origin: 125px 125px;
+}
+
+/* Energy Waves */
+.energy-waves {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+}
+
+.energy-wave {
+  position: absolute;
+  bottom: 0;
+  width: 2px;
+  height: 100px;
+  background: linear-gradient(180deg, transparent, rgba(203, 109, 81, 0.4), transparent);
+  animation: energy-pulse 3s ease-in-out infinite;
+}
+
+/* ========== LUXURY ANIMATIONS ========== */
+@keyframes gentle-float {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(-10px, -5px) rotate(1deg); }
+  50% { transform: translate(5px, -10px) rotate(-0.5deg); }
+  75% { transform: translate(-5px, 5px) rotate(0.5deg); }
+}
+
+@keyframes twinkle-luxury {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.5); }
+}
+
+@keyframes gentle-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes stroke-flow {
+  0%, 100% { stroke-dasharray: 0, 100; }
+  50% { stroke-dasharray: 50, 100; }
+}
+
+@keyframes float-ornament {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-15px) rotate(120deg); }
+  66% { transform: translateY(-8px) rotate(240deg); }
+}
+
+@keyframes border-glow {
+  0%, 100% { opacity: 0.3; box-shadow: 0 0 5px rgba(203, 109, 81, 0.2); }
+  50% { opacity: 0.8; box-shadow: 0 0 15px rgba(203, 109, 81, 0.4); }
+}
+
+@keyframes ray-pulse {
+  0%, 100% { opacity: 0.3; transform: scaleY(1); }
+  50% { opacity: 0.8; transform: scaleY(1.5); }
+}
+
+@keyframes blob-morph {
+  0%, 100% { border-radius: 50% 50% 50% 50%; }
+  25% { border-radius: 60% 40% 60% 40%; }
+  50% { border-radius: 40% 60% 40% 60%; }
+  75% { border-radius: 55% 45% 55% 45%; }
+}
+
+@keyframes network-pulse {
+  0%, 100% { opacity: 0.3; stroke-width: 1; }
+  50% { opacity: 0.8; stroke-width: 2; }
+}
+
+@keyframes node-pulse {
+  0%, 100% { opacity: 0.6; r: 2; }
+  50% { opacity: 1; r: 4; }
+}
+
+@keyframes cascade-fall {
+  0% { opacity: 0; transform: translateY(-20px) scale(0); }
+  50% { opacity: 1; transform: translateY(0px) scale(1); }
+  100% { opacity: 0; transform: translateY(20px) scale(0.5); }
+}
+
+@keyframes ripple-expand {
+  0% { width: 0; height: 0; opacity: 1; }
+  100% { width: 200px; height: 200px; opacity: 0; }
+}
+
+@keyframes energy-pulse {
+  0%, 100% { height: 50px; opacity: 0.3; }
+  50% { height: 150px; opacity: 0.8; }
+}
+
+@keyframes animated-stroke {
+  0% { stroke-dasharray: 0, 20; }
+  100% { stroke-dasharray: 20, 0; }
+}
+
+/* Spectacular Decorations CSS */
+.spectacular-decorations {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* 3D Cubes */
+.cube-container {
+  position: absolute;
+  perspective: 1000px;
+}
+
+.cube-tl {
+  top: 20px;
+  left: 20px;
+}
+
+.cube-br {
+  bottom: 20px;
+  right: 20px;
+}
+
+.cube {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  transform-style: preserve-3d;
+  animation: cube-float 4s ease-in-out infinite;
+}
+
+.cube-small {
+  width: 60px;
+  height: 60px;
+}
+
+.cube-face {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(45deg, rgba(203, 109, 81, 0.7), rgba(212, 132, 90, 0.5));
+  border: 2px solid rgba(184, 93, 71, 0.6);
+  backdrop-filter: blur(10px);
+}
+
+.cube-small .cube-face {
+  width: 60px;
+  height: 60px;
+}
+
+.cube-front { transform: rotateY(0deg) translateZ(40px); }
+.cube-back { transform: rotateY(180deg) translateZ(40px); }
+.cube-right { transform: rotateY(90deg) translateZ(40px); }
+.cube-left { transform: rotateY(-90deg) translateZ(40px); }
+.cube-top { transform: rotateX(90deg) translateZ(40px); }
+.cube-bottom { transform: rotateX(-90deg) translateZ(40px); }
+
+.cube-small .cube-front { transform: rotateY(0deg) translateZ(30px); }
+.cube-small .cube-back { transform: rotateY(180deg) translateZ(30px); }
+.cube-small .cube-right { transform: rotateY(90deg) translateZ(30px); }
+.cube-small .cube-left { transform: rotateY(-90deg) translateZ(30px); }
+.cube-small .cube-top { transform: rotateX(90deg) translateZ(30px); }
+.cube-small .cube-bottom { transform: rotateX(-90deg) translateZ(30px); }
+
+@keyframes cube-float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Plasma Effects */
+.plasma-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.plasma-orb {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(203, 109, 81, 0.8), rgba(212, 132, 90, 0.4), transparent);
+  filter: blur(1px);
+  animation: plasma-pulse 3s ease-in-out infinite;
+}
+
+@keyframes plasma-pulse {
+  0%, 100% { filter: blur(1px) brightness(1); }
+  50% { filter: blur(3px) brightness(1.5); }
+}
+
+/* DNA Helix */
+.dna-helix {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  animation: dna-rotate 10s linear infinite;
+}
+
+.dna-svg {
+  filter: drop-shadow(0 0 10px rgba(203, 109, 81, 0.5));
+}
+
+@keyframes dna-rotate {
+  0% { transform: translateY(-50%) rotateY(0deg); }
+  100% { transform: translateY(-50%) rotateY(360deg); }
+}
+
+/* Lightning Effects */
+.lightning-container {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  width: 200px;
+  height: 100px;
+}
+
+.lightning-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.lightning-bolt {
+  animation: lightning-flash 2s ease-in-out infinite;
+}
+
+@keyframes lightning-flash {
+  0%, 90%, 100% { opacity: 0.3; }
+  5%, 10% { opacity: 1; stroke-width: 4; }
+}
+
+/* Holographic Grid */
+.holographic-grid {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.3;
+}
+
+.grid-svg {
+  animation: grid-wave 8s ease-in-out infinite;
+}
+
+@keyframes grid-wave {
+  0%, 100% { transform: perspective(1000px) rotateX(45deg) rotateY(0deg); }
+  50% { transform: perspective(1000px) rotateX(55deg) rotateY(10deg); }
+}
+
+/* Quantum Particles */
+.quantum-field {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.quantum-particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: radial-gradient(circle, rgba(203, 109, 81, 1), transparent);
+  border-radius: 50%;
+  animation: quantum-flicker 2s ease-in-out infinite;
+}
+
+@keyframes quantum-flicker {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50% { opacity: 1; transform: scale(2); }
+}
+
+/* Geometric Tunnels */
+.tunnel-effect {
+  position: absolute;
+  perspective: 1000px;
+}
+
+.tunnel-tl {
+  top: 100px;
+  left: 100px;
+}
+
+.tunnel-ring {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border: 2px solid rgba(203, 109, 81, 0.4);
+  border-radius: 50%;
+  animation: tunnel-pulse 4s ease-in-out infinite;
+}
+
+@keyframes tunnel-pulse {
+  0%, 100% { transform: scale(1) translateZ(0px); opacity: 0.6; }
+  50% { transform: scale(1.2) translateZ(-50px); opacity: 0.2; }
+}
+
+/* Aurora Effect */
+.aurora-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.aurora-wave {
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  border-radius: 50%;
+  filter: blur(50px);
+  animation: aurora-flow 15s ease-in-out infinite;
+}
+
+.aurora-1 {
+  background: linear-gradient(90deg, transparent, rgba(203, 109, 81, 0.3), transparent);
+  top: 20%;
+  animation-delay: 0s;
+}
+
+.aurora-2 {
+  background: linear-gradient(90deg, transparent, rgba(212, 132, 90, 0.25), transparent);
+  top: 40%;
+  animation-delay: 5s;
+}
+
+.aurora-3 {
+  background: linear-gradient(90deg, transparent, rgba(184, 93, 71, 0.2), transparent);
+  top: 60%;
+  animation-delay: 10s;
+}
+
+@keyframes aurora-flow {
+  0%, 100% { transform: translateX(-100%) skewX(0deg); }
+  50% { transform: translateX(100%) skewX(15deg); }
+}
+
+/* ========== CORNER IMAGE DECORATIONS ========== */
+.corner-image-decorations {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 5;
+  overflow: hidden;
+}
+
+/* Corner Image Containers */
+.corner-image {
+  position: absolute;
+  pointer-events: auto;
+}
+
+.corner-image-tl {
+  top: 20px;
+  left: 20px;
+}
+
+.corner-image-tr {
+  top: 20px;
+  right: 20px;
+}
+
+.corner-image-bl {
+  bottom: 20px;
+  left: 20px;
+}
+
+.corner-image-br {
+  bottom: 20px;
+  right: 20px;
+}
+
+/* Image Containers */
+.image-container {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(203, 109, 81, 0.3);
+  transition: all 0.3s ease;
+}
+
+.image-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(203, 109, 81, 0.5);
+}
+
+/* Corner Images */
+.corner-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 15px;
+  filter: brightness(0.9) contrast(1.1);
+  transition: all 0.3s ease;
+}
+
+.corner-img:hover {
+  filter: brightness(1.1) contrast(1.2);
+}
+
+/* Image Animations */
+.img-floating {
+  animation: gentle-float 4s ease-in-out infinite;
+}
+
+.img-rotating {
+  animation: gentle-rotate 8s linear infinite;
+}
+
+.img-ripple {
+  animation: ripple-pulse 3s ease-in-out infinite;
+}
+
+.img-magnetic {
+  transition: transform 0.1s ease-out;
+}
+
+@keyframes gentle-rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes ripple-pulse {
+  0%, 100% { transform: scale(1); filter: brightness(0.9); }
+  50% { transform: scale(1.02); filter: brightness(1.1); }
+}
+
+/* Image Overlays */
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, 
+    rgba(203, 109, 81, 0.1), 
+    rgba(212, 132, 90, 0.05), 
+    rgba(184, 93, 71, 0.1));
+  border-radius: 15px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-container:hover .image-overlay {
+  opacity: 1;
+}
+
+/* Image Glow Effect */
+.image-glow {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: radial-gradient(circle, rgba(203, 109, 81, 0.3), transparent);
+  border-radius: 25px;
+  animation: glow-pulse 2s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.1); }
+}
+
+/* Particle Trail Effect */
+.particle-trail {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.trail-particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(203, 109, 81, 0.8);
+  border-radius: 50%;
+  animation: particle-orbit 3s linear infinite;
+}
+
+@keyframes particle-orbit {
+  0% { transform: rotate(0deg) translateX(50px) rotate(0deg); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: rotate(360deg) translateX(50px) rotate(-360deg); opacity: 0; }
+}
+
+/* Ripple Effect */
+.ripple-effect {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ripple {
+  position: absolute;
+  border: 2px solid rgba(203, 109, 81, 0.4);
+  border-radius: 50%;
+  animation: ripple-expand 2s ease-out infinite;
+}
+
+.ripple-1 { animation-delay: 0s; }
+.ripple-2 { animation-delay: 0.7s; }
+.ripple-3 { animation-delay: 1.4s; }
+
+@keyframes ripple-expand {
+  0% { width: 0; height: 0; opacity: 1; }
+  100% { width: 120px; height: 120px; opacity: 0; }
+}
+
+/* Magnetic Field Effect */
+.magnetic-field {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.magnetic-line {
+  position: absolute;
+  width: 2px;
+  height: 60px;
+  background: linear-gradient(180deg, 
+    rgba(203, 109, 81, 0.6), 
+    transparent, 
+    rgba(203, 109, 81, 0.6));
+  transform-origin: bottom;
+  animation: magnetic-pulse 2s ease-in-out infinite;
+}
+
+@keyframes magnetic-pulse {
+  0%, 100% { opacity: 0.3; transform: scaleY(1); }
+  50% { opacity: 0.8; transform: scaleY(1.2); }
+}
+
+/* Decorative Frames */
+.decorative-frame {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  pointer-events: none;
+}
+
+.frame-svg {
+  filter: drop-shadow(0 0 5px rgba(203, 109, 81, 0.3));
+}
+
+.animated-frame {
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  animation: draw-frame 3s ease-in-out infinite;
+}
+
+.animated-circle {
+  animation: rotate-dash 4s linear infinite;
+}
+
+.animated-polygon {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: draw-polygon 2.5s ease-in-out infinite;
+}
+
+.animated-corner-frame {
+  stroke-dasharray: 150;
+  stroke-dashoffset: 150;
+  animation: draw-corner 3.5s ease-in-out infinite;
+}
+
+@keyframes draw-frame {
+  0%, 100% { stroke-dashoffset: 200; }
+  50% { stroke-dashoffset: 0; }
+}
+
+@keyframes rotate-dash {
+  0% { transform: rotate(0deg); stroke-dashoffset: 0; }
+  100% { transform: rotate(360deg); stroke-dashoffset: 40; }
+}
+
+@keyframes draw-polygon {
+  0%, 100% { stroke-dashoffset: 100; }
+  50% { stroke-dashoffset: 0; }
+}
+
+@keyframes draw-corner {
+  0%, 100% { stroke-dashoffset: 150; }
+  50% { stroke-dashoffset: 0; }
+}
+
+/* Floating Accent Images */
+.floating-accents {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.accent-image {
+  position: absolute;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.accent-1 {
+  top: 30%;
+  left: 15%;
+  animation: float-accent-1 6s ease-in-out infinite;
+}
+
+.accent-2 {
+  bottom: 35%;
+  right: 20%;
+  animation: float-accent-2 5s ease-in-out infinite;
+}
+
+.accent-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 5px 15px rgba(203, 109, 81, 0.3);
+}
+
+@keyframes float-accent-1 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(5deg); }
+}
+
+@keyframes float-accent-2 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(-3deg); }
+}
+
+/* Image Connections */
+.image-connections {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.connection-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.connection-line {
+  animation: connection-flow 8s ease-in-out infinite;
+}
+
+@keyframes connection-flow {
+  0%, 100% { stroke-dashoffset: 0; opacity: 0.3; }
+  50% { stroke-dashoffset: 20; opacity: 0.7; }
+}
+
+/* Responsive Design for Images */
+@media (max-width: 768px) {
+  .corner-img {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .accent-img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .corner-image-tl, .corner-image-tr {
+    top: 10px;
+  }
+  
+  .corner-image-bl, .corner-image-br {
+    bottom: 10px;
+  }
+  
+  .corner-image-tl, .corner-image-bl {
+    left: 10px;
+  }
+  
+  .corner-image-tr, .corner-image-br {
+    right: 10px;
+  }
+}

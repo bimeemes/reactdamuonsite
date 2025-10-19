@@ -1,0 +1,77 @@
+/* AdminFileManagerPanel styles */
+.admin-file-manager-panel {
+  max-width: 700px;
+  margin: 2rem auto;
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 24px rgba(203, 109, 81, 0.08);
+  padding: 2rem;
+  color: #222;
+}
+.file-upload-section {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.uploading {
+  color: #cb6d51;
+  font-weight: bold;
+}
+.file-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.file-card {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  background: #f7faff;
+  border: 2px solid #cb6d51;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 12px rgba(203, 109, 81, 0.1);
+  padding: 1rem;
+}
+.file-image {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 0.8rem;
+  border: 1px solid #eee;
+}
+.file-icon {
+  font-size: 2.5rem;
+  color: #cb6d51;
+  margin-right: 8px;
+}
+.file-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.file-name {
+  font-size: 1rem;
+  color: #888;
+  margin-bottom: 0.2rem;
+}
+.file-info button {
+  background: linear-gradient(90deg, #cb6d51 60%, gray 100%);
+  color: #fff;
+  border: none;
+  border-radius: 1rem;
+  padding: 0.3rem 1.1rem;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(203, 109, 81, 0.08);
+  transition:
+    background 0.2s,
+    box-shadow 0.2s;
+  margin-right: 0.5rem;
+}
+.file-info button:hover {
+  background: #cb6d51;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(203, 109, 81, 0.18);
+}

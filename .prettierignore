@@ -1,0 +1,15 @@
+# Prettier ignore file
+dist/
+node_modules/
+*.log
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+wp-questionnaire-plugin/
+public/uploads/
+# CSS files with syntax errors - to be fixed manually
+src/components/AdminNewsPanel.css
+src/components/Contact.css
+src/components/News.css

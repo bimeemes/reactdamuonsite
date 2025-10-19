@@ -1,0 +1,38 @@
+# Node.js app configuration for cPanel
+# This file should be uploaded as .htaccess to the Node.js app directory
+
+# Passenger configuration for Node.js
+PassengerAppType node
+PassengerStartupFile server.js
+
+# Set correct Node.js version path - update based on available versions
+# Common paths on cPanel:
+# PassengerNodejs /usr/local/bin/node
+# PassengerNodejs /opt/cpanel/ea-nodejs16/bin/node
+# PassengerNodejs /opt/cpanel/ea-nodejs18/bin/node
+# PassengerNodejs /opt/cpanel/ea-nodejs20/bin/node
+PassengerNodejs /usr/local/bin/node
+
+# Alternative - let cPanel detect automatically
+# Remove the PassengerNodejs line above if this doesn't work
+# and let cPanel's Node.js Selector handle the version
+
+# Security headers
+Header always set X-Content-Type-Options nosniff
+Header always set X-Frame-Options DENY
+Header always set X-XSS-Protection "1; mode=block"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+# CORS headers for API requests
+Header always set Access-Control-Allow-Origin "*"
+Header always set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+Header always set Access-Control-Allow-Headers "Content-Type, Authorization, X-Requested-With"
+
+# Handle preflight OPTIONS requests
+RewriteEngine On
+RewriteCond %{REQUEST_METHOD} OPTIONS
+RewriteRule ^(.*)$ $1 [R=200,L]
+
+# Error handling
+ErrorDocument 404 /index.html
+ErrorDocument 500 "Internal Server Error"

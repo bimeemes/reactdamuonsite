@@ -1,0 +1,25 @@
+# Set default behavior to automatically normalize line endings
+* text=auto eol=lf
+
+# Force all text files to use LF
+*.{js,jsx,ts,tsx,json,css,scss,sass,md,txt,html,xml,svg} text eol=lf
+
+# Ensure batch and shell scripts use the proper line endings
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+*.sh text eol=lf
+
+# Binary files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
+*.otf binary
+*.zip binary
+*.tar.gz binary
+*.tgz binary

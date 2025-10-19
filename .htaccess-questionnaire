@@ -1,0 +1,20 @@
+# .htaccess for /public_html/questionnaire/
+# This should be placed in /public_html/questionnaire/.htaccess
+
+RewriteEngine On
+
+# API routes should be proxied to Node.js backend - NOT served as static files
+RewriteCond %{REQUEST_URI} ^/questionnaire/api/
+RewriteRule ^api/(.*)$ - [L,R=404]
+
+# For React app routes (anything that's NOT api/), serve React files
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !^/questionnaire/api/
+RewriteRule . /questionnaire/dist/index.html [L]
+
+# Serve static assets directly
+<FilesMatch "\.(js|css|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot)$">
+    ExpiresActive On
+    ExpiresDefault "access plus 1 month"
+</FilesMatch>

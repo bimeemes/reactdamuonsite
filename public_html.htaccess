@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Don't rewrite requests to the questionnaire Node.js app
+RewriteRule ^questionnaire/ - [L]
+
+# Handle React app routing
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . index.html [L]

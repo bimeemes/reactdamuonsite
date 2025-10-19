@@ -1,0 +1,81 @@
+/* AdminBackupPanel styles */
+.admin-backup-panel {
+  max-width: 700px;
+  margin: 2rem auto;
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 24px rgba(203, 109, 81, 0.08);
+  padding: 2rem;
+  color: #222;
+}
+.backup-actions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.backup-actions button {
+  background: linear-gradient(90deg, #cb6d51 60%, gray 100%);
+  color: #fff;
+  border: none;
+  border-radius: 1rem;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(203, 109, 81, 0.08);
+  transition:
+    background 0.2s,
+    box-shadow 0.2s;
+}
+.backup-actions button:hover {
+  background: #cb6d51;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(203, 109, 81, 0.18);
+}
+.backup-message {
+  color: #cb6d51;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.backup-list {
+  margin-top: 2rem;
+}
+.backup-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #f7faff;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 8px rgba(203, 109, 81, 0.06);
+  overflow: hidden;
+}
+.backup-table th,
+.backup-table td {
+  padding: 0.7rem 1rem;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+.backup-table th {
+  background: #fff7e6;
+  color: #cb6d51;
+  font-weight: bold;
+}
+.backup-table tr:last-child td {
+  border-bottom: none;
+}
+.backup-table button {
+  background: linear-gradient(90deg, #cb6d51 60%, gray 100%);
+  color: #fff;
+  border: none;
+  border-radius: 1rem;
+  padding: 0.3rem 1.1rem;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(203, 109, 81, 0.08);
+  transition:
+    background 0.2s,
+    box-shadow 0.2s;
+}
+.backup-table button:hover {
+  background: #cb6d51;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(203, 109, 81, 0.18);
+}

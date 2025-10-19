@@ -1,0 +1,89 @@
+{
+  "id": "damoon-mgdjbbey-brnc1",
+  "data": {
+    "personal": {
+      "jobTitle": "رئیس جم تی وی",
+      "workStatus": "unemployed",
+      "email": "trump@gmail.com",
+      "phone": "09127777777",
+      "province": "",
+      "address": "",
+      "maritalStatus": "",
+      "birthYear": "",
+      "gender": "",
+      "militaryService": ""
+    },
+    "about": "",
+    "skills": [
+      {
+        "id": 1759642123709,
+        "skill": "",
+        "level": ""
+      },
+      {
+        "id": 1759642128699,
+        "skill": "",
+        "level": ""
+      },
+      {
+        "id": 1759642129288,
+        "skill": "",
+        "level": ""
+      },
+      {
+        "id": 1759642129860,
+        "skill": "",
+        "level": ""
+      }
+    ],
+    "workExperience": [],
+    "education": [
+      {
+        "id": 1759642140295,
+        "degree": "",
+        "field": "",
+        "university": "",
+        "startYear": "",
+        "endYear": "",
+        "current": false
+      },
+      {
+        "id": 1759642140871,
+        "degree": "",
+        "field": "",
+        "university": "",
+        "startYear": "",
+        "endYear": "",
+        "current": false
+      }
+    ],
+    "languages": [
+      {
+        "id": 1759642145009,
+        "language": "",
+        "level": ""
+      },
+      {
+        "id": 1759642145613,
+        "language": "",
+        "level": ""
+      }
+    ],
+    "jobPreferences": {
+      "provinces": [],
+      "jobCategory": "",
+      "seniority": "",
+      "contractTypes": [],
+      "minSalary": "توافقی",
+      "benefits": []
+    },
+    "attachedResume": null,
+    "isSearchable": true,
+    "uniqueUrl": "damoon-mgdi4rm2-83dz4"
+  },
+  "photo": null,
+  "createdAt": "2025-10-05T10:03:48.491Z",
+  "updatedAt": "2025-10-05T10:03:48.491Z",
+  "views": 0,
+  "status": "pending"
+}

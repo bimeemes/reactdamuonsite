@@ -1,0 +1,114 @@
+/* Guide section layout and steps */
+.insurance-guide {
+  padding: clamp(3rem, 8vw, 4.5rem) clamp(1.5rem, 5vw, 2.5rem);
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Vazirmatn', 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
+.insurance-guide__intro {
+  text-align: center;
+  margin-bottom: clamp(2rem, 5vw, 2.75rem);
+}
+
+.insurance-guide__intro-text {
+  font-size: clamp(1.05rem, 2.2vw, 1.2rem);
+  color: rgba(51, 51, 51, 0.72);
+  line-height: 1.7;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.guide-steps-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-flow: column;
+  gap: clamp(1.75rem, 4vw, 2.4rem);
+  align-content: start;
+  justify-items: center;
+  margin-bottom: clamp(3rem, 8vw, 4.5rem);
+}
+
+.guide-step-card {
+  width: min(320px, 100%);
+  min-height: 220px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fb 100%);
+  border-radius: 20px;
+  border: 2px solid var(--accent-alpha, rgba(165, 169, 172, 0.25));
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: clamp(1.3rem, 3.2vw, 1.9rem);
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.guide-step-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 42px rgba(0, 0, 0, 0.15);
+  border-color: var(--accent, #cb6d51);
+}
+
+.guide-step-number {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--accent, #cb6d51);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.05rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.guide-step-icon {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  font-size: 3rem;
+  color: var(--accent, #cb6d51);
+  opacity: 0.12;
+  user-select: none;
+  pointer-events: none;
+}
+
+.guide-step-content {
+  padding-top: clamp(1.2rem, 3vw, 1.6rem);
+}
+
+.guide-step-title {
+  color: var(--accent, #cb6d51);
+  font-size: clamp(1.1rem, 2.4vw, 1.25rem);
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+.guide-step-description {
+  color: rgba(51, 51, 51, 0.68);
+  line-height: 1.7;
+  font-size: clamp(0.92rem, 2vw, 1rem);
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .guide-steps-grid {
+    grid-template-columns: minmax(0, 1fr);
+    grid-auto-flow: row;
+  }
+
+  .guide-step-card {
+    width: min(360px, 100%);
+  }
+}
+
+@media (max-width: 600px) {
+  .guide-step-card {
+    min-height: 200px;
+  }
+}

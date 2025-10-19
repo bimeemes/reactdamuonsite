@@ -1,0 +1,38 @@
+{
+  "id": "damoon-mgdr0dxx-8dlp4",
+  "data": {
+    "personal": {
+      "jobTitle": "sd",
+      "workStatus": "",
+      "email": "bimeemes@gmail.com",
+      "phone": "09025409857",
+      "province": "",
+      "address": "",
+      "maritalStatus": "",
+      "birthYear": "",
+      "gender": "",
+      "militaryService": ""
+    },
+    "about": "",
+    "skills": [],
+    "workExperience": [],
+    "education": [],
+    "languages": [],
+    "jobPreferences": {
+      "provinces": [],
+      "jobCategory": "",
+      "seniority": "",
+      "contractTypes": [],
+      "minSalary": "توافقی",
+      "benefits": []
+    },
+    "attachedResume": null,
+    "isSearchable": true,
+    "uniqueUrl": "damoon-1759671531569"
+  },
+  "photo": null,
+  "createdAt": "2025-10-05T13:39:15.478Z",
+  "updatedAt": "2025-10-05T13:39:15.478Z",
+  "views": 0,
+  "status": "pending"
+}

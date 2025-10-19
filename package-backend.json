@@ -1,0 +1,26 @@
+{
+  "name": "damuon-backend",
+  "version": "1.0.0",
+  "description": "Backend API for Damuon Insurance Questionnaire System",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "health": "curl -s http://localhost:3001/health || echo 'Server not running'",
+    "logs": "tail -f logs/app.log",
+    "test": "node -c server.js && node -c questionnaire-api-cjs.cjs"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "express-rate-limit": "^6.10.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "keywords": ["api", "questionnaire", "insurance", "backend"],
+  "author": "Damuon Insurance",
+  "license": "Private"
+}

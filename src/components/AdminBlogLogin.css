@@ -1,0 +1,38 @@
+.admin-blog-login-container {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.admin-blog-login-form {
+  background: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 16px #0001;
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  min-width: 320px;
+  direction: rtl;
+}
+.admin-blog-login-form input {
+  padding: 0.7rem 1rem;
+  border: 1.5px solid #2196f3;
+  border-radius: 0.8rem;
+  font-size: 1rem;
+  background: #f8fafc;
+}
+.admin-blog-login-form button {
+  background: #2196f3;
+  color: #fff;
+  border: none;
+  border-radius: 0.8rem;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.admin-blog-login-error {
+  color: #d32f2f;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}

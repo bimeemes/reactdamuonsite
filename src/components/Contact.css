@@ -1,0 +1,258 @@
+/*
+  Contact.css - Clean layout with balanced corner circles
+  Last updated: 2025-10-14
+*/
+
+.contact-container {
+  --circle-size: clamp(150px, 18vw, 200px);
+  --header-offset: calc(var(--header-height, 88px) + 30px);
+  position: relative;
+  min-height: calc(100vh - 40px);
+  padding: calc(var(--header-offset) + 1.5rem) clamp(1rem, 5vw, 2.5rem) clamp(3rem, 6vw, 4.5rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  direction: rtl;
+}
+
+.central-content {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 780px);
+  padding: clamp(2.5rem, 6vw, 3.5rem) clamp(1.8rem, 5vw, 3rem);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.5rem, 4vw, 2.5rem);
+  text-align: center;
+}
+
+.main-title h1 {
+  font-size: clamp(2.1rem, 5vw, 2.8rem);
+  color: #cb6d51;
+  margin-bottom: 0.5rem;
+}
+
+.main-title p {
+  color: #555;
+  font-size: clamp(1.05rem, 3vw, 1.2rem);
+  margin: 0;
+}
+
+.branch-info-display {
+  padding: clamp(1.5rem, 4vw, 2.2rem);
+  min-height: clamp(260px, 38vh, 340px);
+  direction: rtl;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.branch-info-display > div {
+  width: 100%;
+}
+
+.selected-branch-info h2 {
+  font-size: clamp(1.4rem, 3.5vw, 1.8rem);
+  color: #cb6d51;
+  margin-bottom: 0.6rem;
+}
+
+.selected-branch-info h3 {
+  font-size: clamp(1.1rem, 3vw, 1.3rem);
+  color: #777;
+  margin-bottom: 1rem;
+}
+
+.branch-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  align-items: flex-start;
+  text-align: right;
+}
+
+.detail-item {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.detail-icon {
+  font-size: 1.3rem;
+  color: #cb6d51;
+  min-width: 1.6rem;
+}
+
+.detail-item p {
+  margin: 0;
+  color: #333;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.default-info {
+  color: #656565;
+  text-align: center;
+}
+
+.corner-indicators {
+  margin-top: 1.4rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(120px, 1fr));
+  gap: 0.8rem;
+}
+
+.indicator {
+  color: #cb6d51;
+  padding: 0.7rem 1rem;
+  font-weight: 600;
+}
+
+.extra-contacts-section h3 {
+  color: #cb6d51;
+  font-size: clamp(1.2rem, 3.2vw, 1.4rem);
+  margin-bottom: clamp(1rem, 3vw, 1.3rem);
+}
+
+.extra-contacts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: clamp(0.8rem, 3vw, 1.2rem);
+}
+
+.extra-contact-card {
+  padding: clamp(0.9rem, 3vw, 1.1rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+}
+
+.extra-contact-card strong {
+  color: #333;
+}
+
+.extra-contact-card span {
+  color: #cb6d51;
+  font-weight: 600;
+}
+
+/* Corner circle thumbnails */
+.corner-circle {
+  position: absolute;
+  width: var(--circle-size);
+  height: var(--circle-size);
+  border: 4px solid rgba(203, 109, 81, 0.8);
+  border-radius: 50%;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 20px 40px rgba(31, 40, 51, 0.25);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  cursor: pointer;
+  z-index: 2;
+  transform-origin: center;
+  will-change: transform;
+}
+.corner-circle.bottom-left,
+.corner-circle.bottom-right {
+  transform-origin: center bottom;
+}
+
+.corner-circle:hover {
+  transform: scale(1.8);
+  box-shadow: 0 28px 70px rgba(31, 40, 51, 0.3);
+  z-index: 5;
+}
+
+.corner-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.corner-circle.top-right {
+  top: clamp(2.5rem, 8vw, 3.5rem);
+  right: clamp(2.5rem, 8vw, 3.5rem);
+}
+
+.corner-circle.top-left {
+  top: clamp(2.5rem, 8vw, 3.5rem);
+  left: clamp(2.5rem, 8vw, 3.5rem);
+}
+
+.corner-circle.bottom-left {
+  bottom: clamp(2.5rem, 8vw, 3.5rem);
+  left: clamp(2.5rem, 8vw, 3.5rem);
+}
+
+.corner-circle.bottom-right {
+  bottom: clamp(2.5rem, 8vw, 3.5rem);
+  right: clamp(2.5rem, 8vw, 3.5rem);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .contact-container {
+    --circle-size: clamp(130px, 22vw, 170px);
+  }
+}
+
+@media (max-width: 980px) {
+  .contact-container {
+    padding: calc(var(--header-height, 82px) + 2.5rem) clamp(1rem, 6vw, 2rem) clamp(3rem, 8vw, 4rem);
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    justify-content: center;
+  }
+
+  .contact-container > .corner-circle {
+    position: relative;
+    order: 0;
+    width: clamp(120px, 40vw, 150px);
+    height: clamp(120px, 40vw, 150px);
+  }
+
+  .central-content {
+    order: 1;
+    flex: 1 1 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 720px) {
+  .contact-container {
+    --circle-size: clamp(110px, 38vw, 140px);
+    padding: calc(var(--header-height, 76px) + 2rem) 1rem 3.5rem;
+  }
+
+  .contact-container > .corner-circle {
+    width: clamp(110px, 42vw, 130px);
+    height: clamp(110px, 42vw, 130px);
+    box-shadow: 0 12px 26px rgba(31, 40, 51, 0.18);
+  }
+
+  .branch-details {
+    align-items: stretch;
+  }
+
+  .detail-item {
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .contact-container {
+    gap: 1rem;
+  }
+
+  .corner-indicators {
+    grid-template-columns: 1fr;
+  }
+
+  .extra-contacts-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,14 @@
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION BEGIN
+PassengerAppRoot "/home9/damuonco/backend"
+PassengerBaseURI "/api"
+PassengerNodejs "/home9/damuonco/nodevenv/backend/20/bin/node"
+PassengerAppType node
+PassengerStartupFile app.js
+PassengerAppLogFile "/home9/damuonco/logs/passenger.log"
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END
+
+# API-only configuration - DO NOT serve React app files
+RewriteEngine On
+
+# All requests under /api should go to Node.js, not static files
+# No index.html serving for API endpoints!

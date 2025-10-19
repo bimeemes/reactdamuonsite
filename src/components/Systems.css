@@ -1,0 +1,110 @@
+.system-sinad-card {
+  background: conic-gradient(
+    from 90deg at 40% 60%,
+    rgba(246, 110, 32, 0.3) 0deg,
+    transparent 60deg,
+    rgba(117, 117, 117, 0.2) 150deg,
+    rgba(246, 110, 32, 0.15) 240deg,
+    rgba(158, 158, 158, 0.1) 360deg
+  ) !important;
+  color: #333 !important;
+  border: 2px solid rgba(246, 110, 32, 0.3) !important;
+}
+.system-sinad-card:hover {
+  background: conic-gradient(
+    from 270deg at 40% 60%,
+    rgba(117, 117, 117, 0.5) 0deg,
+    rgba(246, 110, 32, 0.6) 60deg,
+    transparent 120deg,
+    rgba(158, 158, 158, 0.4) 240deg,
+    rgba(246, 110, 32, 0.5) 360deg
+  ) !important;
+  color: #333 !important;
+  border: 2px solid rgba(246, 110, 32, 0.6) !important;
+}
+.spinning {
+  animation: spinCard 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55) 1;
+}
+
+@keyframes spinCard {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(360deg);
+  }
+  100% {
+    transform: rotateY(720deg);
+  }
+}
+.systems-section {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0.2rem 1rem 2rem 1rem;
+  text-align: center;
+  position: relative;
+  overflow: visible;
+}
+
+.systems-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #cb6d51;
+  margin-bottom: 2rem;
+}
+
+.systems-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.system-card {
+  background: linear-gradient(90deg, rgba(246, 110, 32, 0.2) 0%, rgba(158, 158, 158, 0.1) 100%);
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 16px rgba(246, 110, 32, 0.1);
+  padding: 1.5rem 2.5rem;
+  min-width: 220px;
+  text-align: center;
+  color: #333;
+  font-size: 1.15rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition:
+    box-shadow 0.2s,
+    transform 0.2s,
+    background 0.2s;
+  cursor: pointer;
+  border: 2px solid rgba(246, 110, 32, 0.2);
+}
+.system-card:hover {
+  box-shadow: 0 8px 32px rgba(246, 110, 32, 0.2);
+  background: linear-gradient(90deg, rgba(158, 158, 158, 0.4) 0%, rgba(246, 110, 32, 0.5) 100%);
+  color: #fff;
+  border: 2px solid rgba(246, 110, 32, 0.6);
+  transform: scale(1.04);
+}
+
+.system-name {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 0.7rem;
+}
+
+.system-desc {
+  font-size: 1rem;
+  color: #888;
+}
+
+.system-form-card {
+  background: linear-gradient(90deg, rgba(97, 97, 97, 0.3) 0%, rgba(33, 33, 33, 0.2) 100%);
+  color: #333;
+  border: 2px solid rgba(97, 97, 97, 0.3);
+}
+.system-form-card:hover {
+  background: linear-gradient(90deg, rgba(33, 33, 33, 0.5) 0%, rgba(246, 110, 32, 0.4) 100%);
+  color: #fff;
+  border: 2px solid rgba(246, 110, 32, 0.5);
+}

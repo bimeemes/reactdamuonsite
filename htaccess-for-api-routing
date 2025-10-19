@@ -1,0 +1,13 @@
+# .htaccess for /public_html/ - handles /api routing
+# This should be added to /public_html/.htaccess
+
+RewriteEngine On
+
+# For /api requests, don't append index.html - pass directly to Passenger/Node.js
+RewriteCond %{REQUEST_URI} ^/api/
+RewriteRule ^api/(.*)$ /api/$1 [L,QSA]
+
+# Disable DirectoryIndex for /api paths
+<LocationMatch "^/api/">
+    DirectoryIndex disabled
+</LocationMatch>

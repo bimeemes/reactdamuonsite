@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="440" height="80" viewBox="0 0 440 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="damuonGradient" x1="0" y1="0" x2="440" y2="96" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#CB6D51" />
+      <stop offset="0.48" stop-color="#D4845A" />
+      <stop offset="1" stop-color="#F0CBA8" />
+    </linearGradient>
+    <linearGradient id="damuonStroke" x1="0" y1="0" x2="440" y2="80" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F6E1D4" stop-opacity="0.65" />
+      <stop offset="1" stop-color="#9B4634" stop-opacity="0.45" />
+    </linearGradient>
+    <radialGradient id="damuonHighlight" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(220 18) rotate(90) scale(54 220)">
+      <stop offset="0" stop-color="#FDF6EE" stop-opacity="0.85" />
+      <stop offset="1" stop-color="#FDF6EE" stop-opacity="0" />
+    </radialGradient>
+    <filter id="wordmarkShadow" x="0" y="0" width="440" height="80" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#1F2833" flood-opacity="0.18" />
+    </filter>
+  </defs>
+
+  <g filter="url(#wordmarkShadow)">
+    <path d="M6 12H26C46 12 60 24 60 36C60 48 46 60 26 60H6V12ZM18 24V48H26C38 48 48 44 48 36C48 28 38 24 26 24H18Z" fill="url(#damuonGradient)" fill-rule="evenodd" clip-rule="evenodd" stroke="url(#damuonStroke)" stroke-width="1.6" stroke-linejoin="round" />
+
+    <path d="M74 60L94 12H116L136 60H121L114.7 44H95.3L89 60H74Z" fill="url(#damuonGradient)" stroke="url(#damuonStroke)" stroke-width="1.6" stroke-linejoin="round" />
+    <path d="M100 42H110L105 28L100 42Z" fill="url(#damuonHighlight)" />
+
+    <path d="M150 60V12H166L185 44L204 12H220V60H208V34L188 60H182L162 34V60H150Z" fill="url(#damuonGradient)" stroke="url(#damuonStroke)" stroke-width="1.6" stroke-linejoin="round" />
+
+    <path d="M236 12V46C236 56 246 62 262 62C278 62 288 56 288 46V12H276V44C276 50 270 52 262 52C254 52 248 50 248 44V12H236Z" fill="url(#damuonGradient)" stroke="url(#damuonStroke)" stroke-width="1.6" stroke-linejoin="round" />
+
+    <path d="M304 36C304 20 318 12 334 12C350 12 364 20 364 36C364 52 350 60 334 60C318 60 304 52 304 36ZM316 36C316 44 322 48 334 48C346 48 352 44 352 36C352 28 346 24 334 24C322 24 316 28 316 36Z" fill="url(#damuonGradient)" stroke="url(#damuonStroke)" stroke-width="1.6" stroke-linejoin="round" />
+
+    <path d="M380 60V12H394L416 46V12H428V60H414L392 26V60H380Z" fill="url(#damuonGradient)" stroke="url(#damuonStroke)" stroke-width="1.6" stroke-linejoin="round" />
+  </g>
+
+  <path d="M12 12H26C46 12 60 24 60 36C60 48 46 60 26 60H12" stroke="url(#damuonHighlight)" stroke-width="1.2" stroke-linecap="round" opacity="0.45" />
+  <path d="M80 12L98 60" stroke="url(#damuonHighlight)" stroke-width="1.2" stroke-linecap="round" opacity="0.35" />
+  <path d="M188 20L170 60" stroke="url(#damuonHighlight)" stroke-width="1.2" stroke-linecap="round" opacity="0.28" />
+  <path d="M240 14V40" stroke="url(#damuonHighlight)" stroke-width="1.2" stroke-linecap="round" opacity="0.3" />
+  <path d="M310 18C310 18 320 12 334 12C348 12 358 18 358 18" stroke="url(#damuonHighlight)" stroke-width="1.2" stroke-linecap="round" opacity="0.35" />
+  <path d="M386 12L422 60" stroke="url(#damuonHighlight)" stroke-width="1.2" stroke-linecap="round" opacity="0.3" />
+</svg>

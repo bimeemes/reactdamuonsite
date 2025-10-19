@@ -1,0 +1,117 @@
+.admin-news-panel {
+  max-width: 700px;
+  margin: 2rem auto;
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 24px rgba(255,140,0,0.08);
+  padding: 2rem;
+  color: #222;
+}
+.admin-news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+.admin-news-card {
+  display: flex;
+  gap: 1.2rem;
+  background: #f7faff;
+  border: 2px solid #CB6D51;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 12px rgba(255,140,0,0.10);
+  padding: 1rem;
+  align-items: center;
+  cursor: grab;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.admin-news-card:active {
+  box-shadow: 0 4px 16px rgba(255,140,0,0.15);
+  transform: scale(0.98);
+}
+.admin-news-image {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 0.8rem;
+  border: 1px solid #eee;
+}
+.admin-news-info {
+  flex: 1;
+}
+.admin-news-info h3 {
+  margin: 0 0 0.3rem 0;
+  color: #CB6D51;
+}
+.admin-news-info span {
+  font-size: 0.95rem;
+  color: #888;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.admin-news-info p {
+  margin: 0.5rem 0 1rem 0;
+}
+.admin-news-info button {
+  margin-right: 0.7rem;
+  background: linear-gradient(90deg, #CB6D51 60%, gray 100%);
+  color: #fff;
+  border: none;
+  border-radius: 1rem;
+  padding: 0.4rem 1.2rem;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(255,140,0,0.08);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.admin-news-info button:hover {
+  background: #CB6D51;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(255,140,0,0.18);
+}
+.admin-news-form {
+  background: #fff7e6;
+  border-radius: 1.2rem;
+  padding: 1.2rem;
+  box-shadow: 0 2px 8px rgba(255,140,0,0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.admin-news-form input,
+.admin-news-form textarea {
+  border: 1px solid #ccc;
+  border-radius: 0.8rem;
+  padding: 0.6rem;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+.admin-news-form input[name="publishDate"] {
+  border: 1px solid #CB6D51;
+  background: #fff7e6;
+  color: #222;
+}
+.admin-news-form button {
+  background: linear-gradient(90deg, #CB6D51 60%, gray 100%);
+  color: #fff;
+  border: none;
+  border-radius: 1rem;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(255,140,0,0.08);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.admin-news-form button:hover {
+  background: #CB6D51;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(255,140,0,0.18);
+}
+.admin-news-preview {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 0.8rem;
+  border: 1px solid #eee;
+  margin-top: 0.5rem;
+}

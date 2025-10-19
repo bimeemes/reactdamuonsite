@@ -1,0 +1,397 @@
+/*
+  App.css - Clean global layout and shared styles
+  Last updated: 2025-10-14
+*/
+
+:root {
+  --header-height: 88px;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Vazirmatn', 'Segoe UI', 'Roboto', Arial, sans-serif;
+  background: linear-gradient(135deg, #d3d6db 0%, #c3c7ce 55%, #d0d4da 100%);
+  background-color: #d0d4da;
+  color: #1f1f1f;
+}
+
+button,
+a {
+  outline: none;
+}
+
+button:focus,
+a:focus,
+[role='button']:focus {
+  outline: none;
+}
+
+button:focus:not(:focus-visible),
+a:focus:not(:focus-visible),
+[role='button']:focus:not(:focus-visible) {
+  outline: none;
+}
+
+button:focus-visible,
+a:focus-visible,
+[role='button']:focus-visible {
+  outline: 2px solid rgba(203, 109, 81, 0.35);
+  outline-offset: 4px;
+  border-radius: 12px;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.App {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Animated gradient background kept subtle */
+.animated-bg {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 18% 22%, rgba(255, 255, 255, 0.06), rgba(28, 34, 42, 0.28) 60%, rgba(28, 34, 42, 0.36))
+      ,
+    radial-gradient(circle at 82% 78%, rgba(255, 255, 255, 0.04), rgba(28, 34, 42, 0.3) 65%, rgba(28, 34, 42, 0.38))
+      ,
+    linear-gradient(180deg, rgba(96, 102, 110, 0.2) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(96, 102, 110, 0.24) 100%);
+  background-size: 200% 200%;
+  animation: gradientMove 16s ease-in-out infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes scrollBtnPulse {
+  0% {
+    opacity: 0;
+    transform: scale(0.55);
+  }
+  45% {
+    opacity: 0.32;
+    transform: scale(1);
+  }
+  65% {
+    opacity: 0.46;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.35);
+  }
+}
+
+@keyframes scrollBtnFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+    filter: saturate(1);
+    box-shadow: 0 10px 26px rgba(203, 109, 81, 0.32);
+  }
+  50% {
+    transform: translateY(-5px);
+    filter: saturate(1.05);
+    box-shadow: 0 16px 32px rgba(203, 109, 81, 0.36);
+  }
+}
+
+@keyframes scrollBtnShimmer {
+  0%,
+  100% {
+    opacity: 0.22;
+    transform: translate(-4%, 2%) scale(0.85);
+  }
+  45% {
+    opacity: 0.4;
+    transform: translate(6%, -6%) scale(1.05);
+  }
+  70% {
+    opacity: 0.3;
+    transform: translate(-2%, -3%) scale(1.12);
+  }
+}
+
+/* Root content spacing accounts for sticky header height */
+#root-content {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: calc(var(--header-height) + 2rem) clamp(1rem, 4vw, 2.5rem) clamp(3rem, 6vw, 4.5rem);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2.5rem, 6vw, 4rem);
+}
+
+.snap-section {
+  position: relative;
+  width: 100%;
+  display: block;
+  scroll-snap-align: start;
+  scroll-margin-top: calc(var(--header-height) + 12px);
+  padding: clamp(3rem, 8vw, 4.5rem) 0;
+}
+
+.fade-section {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-section.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Search results overlay */
+.search-results-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 25, 32, 0.55);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1.5rem, 6vw, 3rem);
+  z-index: 1500;
+}
+
+.search-results-container {
+  width: min(500px, 90vw);
+  max-height: 75vh;
+  overflow-y: auto;
+  background: linear-gradient(135deg, #ffffff 0%, #f7f7f9 100%);
+  border-radius: 22px;
+  padding: clamp(1.5rem, 5vw, 2.5rem);
+  box-shadow: 0 24px 60px rgba(31, 40, 51, 0.25);
+  border: 1px solid rgba(203, 109, 81, 0.25);
+}
+
+.search-results-container h3 {
+  margin-bottom: clamp(1rem, 4vw, 1.5rem);
+  font-size: clamp(1.2rem, 3.5vw, 1.5rem);
+  color: #cb6d51;
+  text-align: center;
+}
+
+.search-results-list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.75rem, 3vw, 1.1rem);
+  margin-bottom: clamp(1.2rem, 4vw, 1.8rem);
+}
+
+.search-result-item {
+  background: rgba(203, 109, 81, 0.08);
+  border: 1px solid rgba(203, 109, 81, 0.25);
+  border-radius: 14px;
+  padding: clamp(0.8rem, 3vw, 1rem) clamp(1rem, 4vw, 1.3rem);
+  font-size: clamp(0.95rem, 3.2vw, 1rem);
+  color: #2d2d2d;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.search-result-item:hover,
+.search-result-item:focus {
+  background: rgba(203, 109, 81, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(203, 109, 81, 0.2);
+}
+
+.close-search-results {
+  width: 100%;
+  border: none;
+  border-radius: 14px;
+  padding: clamp(0.75rem, 3vw, 1rem);
+  font-size: clamp(0.95rem, 3vw, 1rem);
+  font-family: inherit;
+  color: #ffffff;
+  background: linear-gradient(135deg, #cb6d51 0%, #b85d47 100%);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.close-search-results:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 28px rgba(203, 109, 81, 0.3);
+}
+
+/* Scroll-to-top button */
+.scroll-top-btn {
+  position: fixed;
+  left: clamp(1rem, 3vw, 2rem);
+  bottom: clamp(1.2rem, 3vw, 2.5rem);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: none;
+  background: radial-gradient(circle at 30% 30%, #e0a885 0%, #cb6d51 50%, #8c3e2c 100%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 26px rgba(203, 109, 81, 0.35);
+  cursor: pointer;
+  z-index: 1200;
+  transition: transform 0.35s cubic-bezier(0.24, 0.8, 0.25, 1),
+    box-shadow 0.35s cubic-bezier(0.24, 0.8, 0.25, 1),
+    background 0.35s ease,
+    filter 0.35s ease;
+  overflow: hidden;
+  will-change: transform, filter;
+  animation: scrollBtnFloat 5.2s ease-in-out infinite;
+}
+
+.scroll-top-btn:hover {
+  background: radial-gradient(circle at 30% 30%, #f0cba8 0%, #cb6d51 45%, #b85d47 100%);
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 20px 36px rgba(203, 109, 81, 0.4);
+  filter: saturate(1.1);
+  animation-play-state: paused;
+}
+
+.scroll-top-btn svg {
+  width: clamp(20px, 5vw, 24px);
+  height: clamp(20px, 5vw, 24px);
+  transition: transform 0.35s cubic-bezier(0.24, 0.8, 0.25, 1);
+}
+
+.scroll-top-btn:hover svg {
+  transform: translateY(-2px) scale(1.08);
+}
+
+.scroll-top-btn::before {
+  content: '';
+  position: absolute;
+  width: 140%;
+  height: 140%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0) 65%);
+  top: -20%;
+  left: -20%;
+  opacity: 0.28;
+  transform: scale(0.75);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  pointer-events: none;
+  animation: scrollBtnShimmer 6s ease-in-out infinite;
+}
+
+.scroll-top-btn:hover::before {
+  opacity: 0.65;
+  transform: scale(1.08);
+  animation-play-state: paused;
+}
+
+.scroll-top-btn::after {
+  content: '';
+  position: absolute;
+  width: 160%;
+  height: 160%;
+  top: -30%;
+  left: -30%;
+  background: radial-gradient(circle, rgba(240, 203, 168, 0.35) 0%, rgba(203, 109, 81, 0.18) 45%, rgba(203, 109, 81, 0));
+  filter: blur(4px);
+  opacity: 0.22;
+  transform: scale(0.55);
+  animation: scrollBtnPulse 3.6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.scroll-top-btn:hover::after {
+  opacity: 0.35;
+  animation-play-state: paused;
+}
+
+/* Utility helpers */
+.text-center {
+  text-align: center;
+}
+
+.btn-primary {
+  border: none;
+  border-radius: 999px;
+  padding: clamp(0.6rem, 3vw, 0.8rem) clamp(1.4rem, 5vw, 2rem);
+  font-size: clamp(0.9rem, 3vw, 1.05rem);
+  color: #ffffff;
+  background: linear-gradient(135deg, #4f8cff 0%, #6dd5ed 100%);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(79, 140, 255, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  :root {
+    --header-height: 82px;
+  }
+
+  #root-content {
+    padding: calc(var(--header-height) + 1.5rem) clamp(1rem, 6vw, 2rem) clamp(3rem, 8vw, 4rem);
+  }
+
+  .snap-section {
+    padding: clamp(2.5rem, 7vw, 4rem) 0;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --header-height: 76px;
+  }
+
+  .search-results-container {
+    border-radius: 18px;
+  }
+
+  .scroll-top-btn {
+    width: 46px;
+    height: 46px;
+  }
+}
+
+@media (max-width: 480px) {
+  #root-content {
+    padding: calc(var(--header-height) + 1rem) 1rem 3.5rem;
+    gap: clamp(2rem, 10vw, 3rem);
+  }
+
+  .search-results-container {
+    padding: 1.25rem;
+  }
+
+  .scroll-top-btn {
+    left: 0.9rem;
+    bottom: 1rem;
+  }
+}

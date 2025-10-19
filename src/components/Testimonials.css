@@ -1,0 +1,34 @@
+/* Testimonials Component Styles */
+.testimonials-section {
+  font-family: 'Vazirmatn', Arial, sans-serif;
+  direction: rtl;
+}
+
+.testimonials-section h2 {
+  font-weight: 700;
+}
+
+.testimonials-section button {
+  font-family: inherit;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .testimonials-section {
+    padding: 2rem 1rem;
+  }
+
+  .testimonials-section h2 {
+    font-size: 2rem !important;
+  }
+
+  /* Hide navigation buttons on mobile */
+  .testimonials-section button[style*='position: absolute'] {
+    display: none;
+  }
+
+  /* Adjust padding when nav buttons are hidden */
+  .testimonials-section div[style*='padding: 0 80px'] {
+    padding: 0 20px !important;
+  }
+}
